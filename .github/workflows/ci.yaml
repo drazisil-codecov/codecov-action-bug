@@ -35,3 +35,8 @@ jobs:
         with:
           flags: "${{ matrix.python }}"
           verbose: true # optional (default = false)
+      - run: |
+          curl -Os https://uploader.codecov.io/latest/linux/codecov
+
+          chmod +x codecov
+          ./codecov -v

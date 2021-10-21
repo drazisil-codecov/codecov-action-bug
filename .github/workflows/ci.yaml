@@ -33,7 +33,11 @@ jobs:
 
       - uses: codecov/codecov-action@v2
         with:
-          flags: "${{ matrix.python }}"
+          flags: ${{ matrix.python }}
+          verbose: true # optional (default = false)
+      - uses: codecov/codecov-action@v2
+        with:
+          flags: flagshavefun
           verbose: true # optional (default = false)
       - run: |
           curl -Os https://uploader.codecov.io/latest/linux/codecov

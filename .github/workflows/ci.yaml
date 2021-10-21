@@ -33,7 +33,7 @@ jobs:
 
       - uses: codecov/codecov-action@v2
         with:
-          flags: ${{ matrix.python }}
+          flags: (${{ matrix.python }}).toString()
           verbose: true # optional (default = false)
       - uses: codecov/codecov-action@v2
         with:
